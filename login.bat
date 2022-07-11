@@ -7,7 +7,10 @@ SET /A time = 5
 ::Functions
 GOTO main
 
-:usr_input
+ECHO Please enter the account name
+SET /P message=
+ECHO %message%
+GOTO end
 
 
 
