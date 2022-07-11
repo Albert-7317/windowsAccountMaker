@@ -1,5 +1,5 @@
 @ECHO OFF
-FOR /L %x IN (1,1,4) DO (
+FOR /L IN (1,1,4) DO (
     ECHO Starting.
     CLS
     ECHO Starting..
