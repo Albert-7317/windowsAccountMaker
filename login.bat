@@ -8,12 +8,13 @@ TIMEOUT 1
 CLS
 ECHO Starting.....
 TIMEOUT 1
-CLSS
+CLS
 
 ::Variables
 ECHO Starting........
 COLOR 2
 SET /A time = 5
+SET /A folder = _directory
 
 ::Functions
 GOTO main
@@ -23,12 +24,12 @@ ECHO Please enter the account name
 SET /P username=
 ECHO Please enter a password
 SET /P password=
+SET /A user_directory = %username% and %folder%
+ECHO %user_directory
 GOTO make_acc
 
 :make_acc
 net user %username% %password% /add
-WMIC USERACCOUNT WHERE "Name=%username%" SET PasswordExpires=FALSE
-WMIC USERACCOUNT WHERE "Name=%username%" SET Passwordchangeable=FALSE
 GOTO end
 
 :main
