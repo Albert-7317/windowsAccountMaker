@@ -28,6 +28,7 @@ GOTO make_acc
 
 :make_acc
 net user %username% %password% /add
+MKDIR "C:\Users\%username%\Desktop\test"
 GOTO end
 
 :main
