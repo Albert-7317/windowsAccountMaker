@@ -1,12 +1,9 @@
 @ECHO OFF
-FOR /L IN (1,1,4) DO (
-    ECHO Starting.
+
+FOR %%x IN (1 2 3) DO (
+    ECHO %%x
     CLS
-    ECHO Starting..
-    CLS
-    ECHO Starting...
-    CLS
-) 
+)
 
 
 
