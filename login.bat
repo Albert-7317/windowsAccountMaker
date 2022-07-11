@@ -24,8 +24,7 @@ ECHO Please enter the account name
 SET /P username=
 ECHO Please enter a password
 SET /P password=
-SET /A user_directory = %username% and %folder%
-ECHO %user_directory
+ECHO %username% _direct
 GOTO make_acc
 
 :make_acc
