@@ -14,7 +14,6 @@ CLS
 ECHO Starting........
 COLOR 2
 SET /A time = 5
-SET /A folder = _directory
 
 ::Functions
 GOTO main
