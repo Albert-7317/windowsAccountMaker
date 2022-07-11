@@ -1,21 +1,14 @@
 @ECHO OFF
 
-FOR %%x IN (1 2 3) DO (
-    ECHO %%x
-    CLS
-    ECHO Starting.
-    TIMEOUT 1
-    CLS
-    ECHO Statring ..
-    TIMEOUT 1
-    CLS
-    ECHO Starting...
-    TIMEOUT 1
-    CLS
-)
+ECHO Starting.
+CLS
+ECHO Starting...
+CLS
+ECHO Starting.....
+CLS
 
 ::Variables
-ECHO Starting....
+ECHO Starting........
 COLOR 2
 SET /A time = 5
 
@@ -30,15 +23,16 @@ SET /P password=
 GOTO make_acc
 
 :make_acc
-
-
-
+net user %username% %password% /add
+WMIC USERACCOUNT WHERE "Name=%username%" SET PasswordExpires=FALSE
+WMIC USERACCOUNT WHERE "Name=%username%" SET Passwordchangeable=FALSE
+GOTO end
 
 :main
 GOTO usr_input
 
-
 :end
+ECHO ....Completed
 COLOR 7
 CLS
 TIMEOUT %time%
