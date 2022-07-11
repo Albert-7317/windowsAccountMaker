@@ -1,11 +1,14 @@
 @ECHO OFF
 
 ECHO Starting.
+TIMEOUT 1
 CLS
 ECHO Starting...
+TIMEOUT 1
 CLS
 ECHO Starting.....
-CLS
+TIMEOUT 1
+CLSS
 
 ::Variables
 ECHO Starting........
