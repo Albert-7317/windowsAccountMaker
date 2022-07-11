@@ -1,4 +1,14 @@
 @ECHO OFF
+FOR /L %x IN (1,1,4) DO (
+    ECHO Starting.
+    CLS
+    ECHO Starting..
+    CLS
+    ECHO Starting...
+    CLS
+) 
+
+
 
 ::Variables
 COLOR 2
@@ -9,9 +19,13 @@ GOTO main
 
 :usr_input
 ECHO Please enter the account name
-SET /P message=
-ECHO %message%
-GOTO end
+SET /P username=
+ECHO Please enter a password
+SET /P password=
+GOTO make_acc
+
+:make_acc
+
 
 
 
